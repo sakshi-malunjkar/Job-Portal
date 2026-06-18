@@ -1,0 +1,393 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --shadow-ext: #d9caec;
+  --shadow-ext-light: #e6dbf4;
+}
+
+html.dark {
+  --shadow-ext: #3c1a65;
+  --shadow-ext-light: #240f3d;
+}
+
+/* Global Dark Mode Overrides */
+html.dark {
+  background-color: #0F0F12 !important;
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0F0F12 !important;
+  color: #F3F4F6 !important;
+}
+
+/* Background Color Overrides for Cards, Inputs, Sidebars and Headers */
+html.dark .bg-white,
+html.dark .bg-gray-50,
+html.dark div[style*="background-color: rgb(250, 249, 247)"],
+html.dark div[style*="background-color: #FAF9F7"],
+html.dark div[style*="background-color: rgb(245, 240, 235)"],
+html.dark div[style*="background-color: #F5F0EB"] {
+  background-color: #16161D !important;
+}
+
+/* Page container background */
+html.dark div.flex-1.flex.flex-col.overflow-hidden > div.flex-1.overflow-y-auto {
+  background-color: #0F0F12 !important;
+}
+
+/* Landing page background overrides */
+html.dark div.font-sans[style*="background-color: #F5F0EB"],
+html.dark section[style*="background-color: #F5F0EB"] {
+  background-color: #0F0F12 !important;
+}
+
+html.dark section[style*="background-color: #EDE8F5"],
+html.dark section[style*="background-color: rgb(237, 232, 245)"] {
+  background-color: #1A1225 !important;
+}
+
+/* Topbar search container input */
+html.dark div.flex-1.max-w-xl.relative input,
+html.dark form.flex-1.max-w-xl.relative input {
+  background-color: #20202A !important;
+  border-color: #272730 !important;
+}
+
+/* Structural components (Sidebars, Navigation, Headers) */
+html.dark nav,
+html.dark header,
+html.dark .border-r,
+html.dark .border-b,
+html.dark .border-t,
+html.dark .border,
+html.dark .border-gray-50,
+html.dark .border-gray-100,
+html.dark .border-gray-200 {
+  background-color: #16161D !important;
+  border-color: #272730 !important;
+}
+
+/* Form input styling */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #20202A !important;
+  border-color: #2C2C35 !important;
+  color: #F3F4F6 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #6B7280 !important;
+}
+
+/* Text elements */
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700,
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark span.font-bold {
+  color: #F9FAFB !important;
+}
+
+html.dark .text-gray-600,
+html.dark .text-gray-500,
+html.dark span.text-gray-600 {
+  color: #D1D5DB !important;
+}
+
+html.dark .text-gray-400 {
+  color: #9CA3AF !important;
+}
+
+/* Links and Hover states */
+html.dark a.text-gray-600:hover,
+html.dark a.text-gray-700:hover,
+html.dark button:hover svg {
+  color: #FFFFFF !important;
+}
+
+html.dark .hover\:bg-gray-50:hover,
+html.dark .hover\:bg-red-50:hover,
+html.dark .hover\:bg-gray-100:hover,
+html.dark .hover\:bg-purple-50:hover {
+  background-color: #22222E !important;
+}
+
+/* Badges and tags */
+html.dark div[style*="background-color: #EDE8F5"],
+html.dark span[style*="background-color: #EDE8F5"],
+html.dark div[style*="background-color: rgb(237, 232, 245)"],
+html.dark span[style*="background-color: rgb(237, 232, 245)"] {
+  background-color: #2D1A4A !important;
+  color: #C084FC !important;
+}
+
+html.dark span.bg-yellow-100 {
+  background-color: #422006 !important;
+  color: #FEF08A !important;
+}
+
+html.dark span.bg-green-100 {
+  background-color: #064E3B !important;
+  color: #A7F3D0 !important;
+}
+
+html.dark span.bg-red-100 {
+  background-color: #7F1D1D !important;
+  color: #FCA5A5 !important;
+}
+
+html.dark button.bg-gray-100,
+html.dark a.bg-gray-100 {
+  background-color: #272733 !important;
+  color: #E5E7EB !important;
+}
+
+/* Chat details background */
+html.dark .bg-white.text-gray-800 {
+  background-color: #20202A !important;
+  color: #F3F4F6 !important;
+}
+
+/* Messages container */
+html.dark div[style*="background-color: rgb(245, 240, 235)"],
+html.dark div[style*="background-color: #F5F0EB"] {
+  background-color: #0F0F12 !important;
+}
+
+/* SVG icon adjustments */
+html.dark svg {
+  stroke-opacity: 0.9;
+}
+
+/* --- Impressive 3D & Animation Overrides --- */
+
+/* 3D Floating Animation */
+@keyframes float3D {
+  0% {
+    transform: perspective(1200px) rotateX(6deg) rotateY(-12deg) rotateZ(1deg) translateY(0px);
+    box-shadow: -15px 20px 30px rgba(0, 0, 0, 0.08), 0px 5px 10px rgba(0, 0, 0, 0.04);
+  }
+  50% {
+    transform: perspective(1200px) rotateX(8deg) rotateY(-8deg) rotateZ(0deg) translateY(-10px);
+    box-shadow: -25px 35px 50px rgba(0, 0, 0, 0.12), 0px 10px 20px rgba(0, 0, 0, 0.06);
+  }
+  100% {
+    transform: perspective(1200px) rotateX(6deg) rotateY(-12deg) rotateZ(1deg) translateY(0px);
+    box-shadow: -15px 20px 30px rgba(0, 0, 0, 0.08), 0px 5px 10px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.floating-3d-card {
+  animation: float3D 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+
+/* Dark mode shadow adjustment */
+html.dark .floating-3d-card {
+  box-shadow: -15px 20px 30px rgba(0, 0, 0, 0.5), 0px 5px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Animated Glowing Background Blobs */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(40px, -60px) scale(1.15);
+  }
+  66% {
+    transform: translate(-30px, 30px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 14s infinite alternate ease-in-out;
+}
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Text Reveal Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.delay-100 { animation-delay: 0.15s; }
+.delay-200 { animation-delay: 0.3s; }
+.delay-300 { animation-delay: 0.45s; }
+.delay-400 { animation-delay: 0.6s; }
+
+/* 3D Lift & Rotate Hover Cards */
+.hover-lift-3d {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease !important;
+  transform-style: preserve-3d;
+}
+
+.hover-lift-3d:hover {
+  transform: translateY(-8px) perspective(1000px) rotateX(4deg) rotateY(-2deg) !important;
+  box-shadow: 0px 20px 45px rgba(91, 45, 142, 0.12) !important;
+  border-color: rgba(91, 45, 142, 0.25) !important;
+}
+
+html.dark .hover-lift-3d:hover {
+  box-shadow: 0px 20px 45px rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(192, 132, 252, 0.2) !important;
+}
+
+/* 3D Floating Badges Keyframes */
+@keyframes float3DSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(12deg) scale(1);
+  }
+  50% {
+    transform: translateY(-15px) rotate(14deg) scale(1.03);
+  }
+}
+@keyframes float3DMedium {
+  0%, 100% {
+    transform: translateY(0px) rotate(-6deg) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) rotate(-8deg) scale(1.04);
+  }
+}
+@keyframes float3DFast {
+  0%, 100% {
+    transform: translateY(0px) rotate(6deg) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) rotate(4deg) scale(1.02);
+  }
+}
+
+.animate-float-3d-slow {
+  animation: float3DSlow 7s ease-in-out infinite;
+}
+.animate-float-3d-medium {
+  animation: float3DMedium 5s ease-in-out infinite;
+}
+.animate-float-3d-fast {
+  animation: float3DFast 4s ease-in-out infinite;
+}
+
+/* Scroll Fade In Animations */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px) scale(0.97);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.scroll-fade-in.scroll-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 3D Intro Text Animation */
+@keyframes textIntro3D {
+  0% {
+    opacity: 0;
+    transform: perspective(1000px) rotateX(50deg) translateZ(-300px) scale3d(0.6, 0.6, 0.6);
+    text-shadow: none;
+  }
+  60% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(-15deg) translateZ(120px) scale3d(1.25, 1.25, 1.25);
+    text-shadow: 
+      0 1px 0 var(--shadow-ext),
+      0 2px 0 var(--shadow-ext),
+      0 3px 0 var(--shadow-ext),
+      0 4px 0 var(--shadow-ext),
+      0 5px 0 var(--shadow-ext),
+      0 6px 0 var(--shadow-ext),
+      0 7px 8px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1000px) rotateX(0deg) translateZ(0) scale3d(1, 1, 1);
+    text-shadow: 
+      0 1px 0 var(--shadow-ext-light),
+      0 2px 0 var(--shadow-ext-light),
+      0 3px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.animate-3d-text-intro {
+  transform-style: preserve-3d;
+  animation: textIntro3D 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  will-change: transform, opacity, text-shadow;
+}
+
+/* Mobile Responsive Overrides */
+@media (max-width: 767px) {
+  .hero-3d-card {
+    transform: none !important;
+    transform-style: flat !important;
+    animation: none !important;
+  }
+  .hero-3d-card-toast {
+    transform: none !important;
+  }
+  .animate-3d-text-intro {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    text-shadow: none !important;
+  }
+}
+
+/* Sidebar Responsive Layout */
+.sidebar-container {
+  position: relative;
+  height: 100%;
+  width: 260px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 40;
+  flex-shrink: 0;
+}
+
+.sidebar-collapsed {
+  width: 72px;
+}
+
+@media (max-width: 767px) {
+  .sidebar-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-collapsed {
+    transform: translate3d(-100%, 0, 0);
+    width: 260px !important; /* Keep width same as expanded during transitions to prevent visual items squishing */
+  }
+}
