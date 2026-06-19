@@ -2,6 +2,9 @@
 
 A modern, fully responsive Job Portal application designed for candidates to find their dream careers and recruiters to source top talent. Built using the MERN stack with real-time features and responsive dashboards.
 
+### 🚀 Live Demo & Testing
+Experience the platform live at: [job-portal-gray-two.vercel.app](https://job-portal-gray-two.vercel.app/)
+
 ---
 
 ## 🌟 Key Features
